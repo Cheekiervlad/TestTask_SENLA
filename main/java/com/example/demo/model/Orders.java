@@ -4,8 +4,12 @@ package com.example.demo.model;
 public class Orders extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   Long id;
-    int userID;
+    @oneToMany()
+    Long id;
+    @Column("");
+    Integer userID;
+    @Column("status");
     String status;
+    @Column("");
     String createdAt;
 }

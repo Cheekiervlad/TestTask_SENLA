@@ -6,10 +6,14 @@ import java.util.Date;
 public class Products extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY
-    @one
+    @oneToMany()
     Long id;
+    @Column("");
     String name;
-    int price;
+    @Column("");
+    Integer price;
+    @Column("");
     String status;
+    @Column("");
     Date createdAt;
 }
